@@ -2,13 +2,15 @@ import styles from './styles.module.css'
 
 type InputPros = {
   id: string;
-} & React.ComponentProps<'input'>;
+  labelText: string;
+} & React.ComponentProps<'input'>; // Permite receber as propriedes do input que tem no HTML
 
-export function Input({id, type}: InputPros) {
+export function Input({id, labelText, type, ...rest}: InputPros) {
+  // O rest permite receber o resto das propriedades faltantes no componente
   return (
     <>
-      <label htmlFor={id}>task</label>
-      <input id={id} type={type} />
+      <label htmlFor={id}>{labelText}</label>
+      <input id={id} type={type} {...rest} />
     </>
   );
 }
