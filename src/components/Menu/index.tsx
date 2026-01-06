@@ -1,6 +1,6 @@
 import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from 'lucide-react';
 import styles from './styles.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type AvailiableTheme = 'dark' | 'light';
 
@@ -10,9 +10,27 @@ export function Menu() {
 
   function handleChangeTheme(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.preventDefault();
-    console.log(theme);
-    setTheme(theme);
+    setTheme(prevTheme => {
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      return nextTheme;
+    })
   }
+
+  // useEffect(() => {
+  //   console.log('Carregado');
+    
+  // }) // Quando está sem dependencias, é executado toda vez que o componente renderiza na tela
+
+  useEffect(() => {
+    console.log('Theme mudou', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+
+    return() => {
+      console.log('Este componente será atualizado');
+      
+    }
+  },[theme]) // Funciona da mesma forma sem dependencias, porém, Só é executado quando o React monta o componente
+  // na tela pela primeira vez
 
   return (
     <nav className={styles.menu}>
