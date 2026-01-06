@@ -83,14 +83,6 @@ A aplicação estará disponível em: `http://localhost:5173`
 
 ---
 
-## 📄 Licença | License
-
-Este projeto está sob a licença **MIT**.
-
-This project is licensed under the **MIT License**.
-
----
-
 ## 👨‍💻 Autor | Author
 
 Desenvolvido por **Arthur Falcomer**
