@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# ⏱️ Chronos Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🇧🇷 Aplicação web para gerenciamento de tempo usando a técnica Pomodoro
+> 🇺🇸 Web application for time management using the Pomodoro technique
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Sobre o projeto | About the project
 
-## React Compiler
+🇧🇷 **Chronos Pomodoro** é uma aplicação desenvolvida para ajudar estudantes e profissionais a aumentarem a produtividade utilizando a técnica Pomodoro. A ideia é dividir o tempo de trabalho em ciclos de foco e descanso, promovendo melhor concentração e menos fadiga mental.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+🇺🇸 **Chronos Pomodoro** is an application designed to help students and professionals improve productivity using the Pomodoro technique. The idea is to divide work time into focus and break cycles, promoting better concentration and less mental fatigue.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Funcionalidades | Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🇧🇷
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* ⏳ Temporizador de foco (Pomodoro)
+* ☕ Pausas curtas e longas
+* 📜 Histórico de ciclos
+* 📱 Interface responsiva
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+🇺🇸
+
+* ⏳ Focus timer (Pomodoro)
+* ☕ Short and long breaks
+* 📜 Cycle history
+* 📱 Responsive interface
+
+---
+
+## 🛠️ Tecnologias utilizadas | Tech stack
+
+* React
+* TypeScript
+* Vite
+* CSS Modules
+
+---
+
+## 💻 Como executar o projeto | How to run the project
+
+### Pré-requisitos | Requirements
+
+* Node.js (versão 18 ou superior)
+* npm ou yarn
+
+### Passos | Steps
+
+```bash
+# Clone o repositório | Clone the repository
+git clone https://github.com/devfalcomer/chronos-podomoro.git
+
+# Acesse a pasta do projeto | Enter the project folder
+cd chronos-podomoro
+
+# Instale as dependências | Install dependencies
+npm install
+
+# Execute o projeto | Run the project
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação estará disponível em: `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Demonstração | Demo
+
+🇧🇷 Em breve serão adicionadas imagens ou um link para demonstração online.
+
+🇺🇸 Screenshots or an online demo link will be added soon.
+
+---
+
+## 🤝 Contribuição | Contributing
+
+🇧🇷 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+
+🇺🇸 Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 Licença | License
+
+Este projeto está sob a licença **MIT**.
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Autor | Author
+
+Desenvolvido por **Arthur Falcomer**
+GitHub: [https://github.com/devfalcomer](https://github.com/devfalcomer)
