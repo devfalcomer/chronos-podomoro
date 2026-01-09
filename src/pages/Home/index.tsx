@@ -1,29 +1,21 @@
 import '../../styles/global.css';
 import '../../styles/theme.css';
 
-
 import { Container } from '../../components/Container';
 import { CountDown } from '../../components/CountDown';
 import { MainTemplate } from '../../templates/MainTemplate';
 import { MainForm } from '../../components/MainForm';
-import type { TaskStateModel } from '../../models/TaskStateModel';
 
-export type HomeProps = {
-  state: TaskStateModel,
-  setState: React.Dispatch<React.SetStateAction<TaskStateModel>>
-}
-
-export function Home(props: HomeProps) {
-  
+export function Home() {
   return (
     <>
       <MainTemplate>
         <Container>
-          <CountDown {...props}/>
+          <CountDown />
         </Container>
-        
+
         <Container>
-          <MainForm {...props}/>
+          <MainForm />
         </Container>
       </MainTemplate>
     </>
