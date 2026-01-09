@@ -1,32 +1,47 @@
+import { PlayCircleIcon } from 'lucide-react';
+import { Cycles } from '../Cycles';
+import { DefaultButton } from '../DefaultButton';
+import { Input } from '../Input';
+import type { HomeProps } from '../../pages/Home';
 
-import { PlayCircleIcon } from "lucide-react";
-import { Cycles } from "../Cycles";
-import { DefaultButton } from "../DefaultButton";
-import { Input } from "../Input";
+export function MainForm({ state, setState }: HomeProps) {
+  function handleClick() {
+    setState(prevState => {
+      return {
+        ...prevState,
+        config: {
+          ...prevState.config,
+          workTime: 34
+        },
+        formattedSecondsRemaining: '23:34'
+      };
+    });
+  }
 
-export function MainForm() {
-  return(
+  return (
+    <form className='form' action=''>
+      <div>
+        <button type='button' onClick={handleClick}>Clicar</button>
+      </div>
+      <div className='formRow'>
+        <Input
+          id='input'
+          labelText='task'
+          type='text'
+          placeholder='Digite algo'
+        />
+      </div>
+      <div className='formRow'>
+        <p>Próximo intervalo é de {state.config.workTime}min</p>
+      </div>
 
-  <form className='form' action=''>
-    <div className='formRow'>
-      <Input
-        id='input'
-        labelText='task'
-        type='text'
-        placeholder='Digite algo'
-      />
-    </div>
-    <div className='formRow'>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+      <div className='formRow'>
+        <Cycles />
+      </div>
 
-    <div className='formRow'>
-      <Cycles />
-    </div>
-
-    <div className='formRow'>
-      <DefaultButton icon={<PlayCircleIcon />} />
-    </div>
-  </form>
-  )
+      <div className='formRow'>
+        <DefaultButton icon={<PlayCircleIcon />} />
+      </div>
+    </form>
+  );
 }
